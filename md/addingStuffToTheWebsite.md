@@ -5,7 +5,7 @@ aliases:
   - null
 date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:29:15
-date modified: Sunday, 2023-07-23, 20:55:53
+date modified: Monday, 2023-07-24, 00:50:17
 lang: en-GB
 subtitle: Adding external features to the site
 tags:
@@ -65,7 +65,7 @@ The [Open Graph Protocol](https://ogp.me/) is used to produce a richer sharing e
 
 This information is added to the page using the [metadata (`meta`)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) tag in the `head`. Using the example from the Open Graph website:
 
-```html
+```html {data-theme="light"}
 <html prefix="og: https://ogp.me/ns#">
 <head>
 <title>The Rock (1996)</title>

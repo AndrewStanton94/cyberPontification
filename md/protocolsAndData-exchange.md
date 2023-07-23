@@ -5,7 +5,7 @@ aliases:
   - null
 date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:29:55
-date modified: Sunday, 2023-07-23, 20:56:12
+date modified: Monday, 2023-07-24, 00:51:47
 lang: en-GB
 subtitle: How the browser gets data
 tags:
@@ -73,13 +73,13 @@ The more recent syntax is JavaScript Object Notation (JSON). JSON works with lis
 
 Lists are comma-separated items wrapped in square brackets.
 
-```json
+```json {data-theme="light"}
 ['string', 5, false]
 ```
 
 Objects are key-value pairs wrapped in braces. The key is wrapped in double-quotes and is connected to the value with a colon.
 
-```json
+```json {data-theme="light"}
 {
 	"breakfast": "Hideout",
 	"lunch": "Andres",

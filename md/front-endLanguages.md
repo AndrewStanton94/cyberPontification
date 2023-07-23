@@ -6,7 +6,7 @@ aliases:
 build command: pandoc Client\ \(front-end\)\ languages.md -s -o client2.html
 date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:25:33
-date modified: Sunday, 2023-07-23, 20:55:30
+date modified: Monday, 2023-07-24, 00:48:42
 lang: en-GB
 subtitle: The languages that put things on your screen
 tags:
@@ -28,7 +28,7 @@ When you add this additional information to your document, you use HTML tags. Th
 
 The closing tag puts a forward slash `/` between the less-than sign and the tag name. It won't have any attributes.
 
-```html
+```html {data-theme="light"}
 
 <html>
     <head>
@@ -52,7 +52,7 @@ If you want to draw attention to pieces of text, you will use the emphasis [`em`
 
 While these normally translate to italics and bold, they don't have to. You can create your own conventions for your site, and people using assistive technologies, like screen readers, will perceive it differently. When writing, focus on the tag goal, rather than the usual implementation.
 
-```html
+```html {data-theme="light"}
 
 These tags are useful for highlighting <strong>the important bits</strong>. They should be used <em>in moderation</em> as too much styling can reduce the impact and make it more difficult to read.
 
@@ -62,7 +62,7 @@ These tags are useful for highlighting <strong>the important bits</strong>. They
 
 The [paragraph (`p`)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p) tag represents a chunk of text with a common theme. Then the browser can put space around these elements. This is important as HTML compresses multiple space characters and line breaks into a single space. This allows people writing HTML directly to format their code without these characters showing up for site visitors.
 
-```html
+```html {data-theme="light"}
 
 <p>This is a chunk of text with a single theme or goal. It's a paragraph.</p>
 
@@ -84,7 +84,7 @@ There should only be one `h1` per page, but you can use the other levels as many
 
 When creating a sub heading, use the level directly under the parent heading. A `h3` under a `h2`. Don't skip levels. This can be tempting if the correct header looks too big, but this causes accessibility issues. Headings provide information about the structure of the document.
 
-```html
+```html {data-theme="light"}
 
 <h1>The page title</h1>
 
@@ -108,7 +108,7 @@ There are two basic types of lists: [Ordered `ol` (numbered)](https://developer.
 
 They require two tags. A container must be created to declare which type of list you want using `ol` or `ul`. Then use the [list item (`li`)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li) tag to wrap each individual item.
 
-```html
+```html {data-theme="light"}
 <h2>Hampshire cities</h2>
 
 <p>A list without rank</p>
@@ -135,7 +135,7 @@ To create links, we use the [`a` (anchor)](https://developer.mozilla.org/en-US/d
 
 When linking to an external site, you give the full URL `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em`. If you're linking to another page on the same site, you only need to provide the path `/en-US/docs/Web/HTML/Element/em`.
 
-```html
+```html {data-theme="light"}
 <a
 	href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
 	>Learn about the em tag on MDN
@@ -157,7 +157,7 @@ Some tags have their own specific attributes (like `href`) but there are some [g
 
 : Use this to identify an element. Each value should be unique within the page. IDs can be used to jump to a part of the page. Pair it with an `a` tag and start the `href` value with a `#`, then add the ID.
 
-```html
+```html {data-theme="light"}
 <p id="top">
 This is the introductory paragraph.
 </p>
@@ -171,7 +171,7 @@ This is the introductory paragraph.
 
 : These are labels. They are normally used with CSS to change the element's appearance. An element can have multiple classes separated by spaces.
 
-```html
+```html {data-theme="light"}
 <a href="/buy" class="cta cta-primary">Buy now</a>
 ```
 
@@ -179,7 +179,7 @@ This is the introductory paragraph.
 
 : Use this to add CSS rules directly to an element. It can be useful, but having separate CSS activated by a class is better if this is required in multiple places.
 
-```html
+```html {data-theme="light"}
 <a href="/buy" style="width: 100%">Buy now</a>
 ```
 
@@ -193,7 +193,7 @@ A tag that depends on attributes is the [image `img`](https://developer.mozilla.
 
 The `img` tag doesn't need a closing tag. It is the instruction to insert an image rather than annotating existing text.
 
-```html
+```html {data-theme="light"}
 <img
 	src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993"
 	alt="A white dog with long hair in front of a pink background">
@@ -227,7 +227,7 @@ There are:
 
 : These introduce or wrap up the content. This can either be the entire page, or the other regions in this list.
 
-```html
+```html {data-theme="light"}
 <body>
 	<header>
 	</header>
@@ -265,7 +265,7 @@ The code snippets in this section are used to demonstrate the syntax. There are 
 
 Cascading Style Sheets (CSS) works by setting properties. The property and the value are connected by a colon. When you have multiple declarations, they are separated by a semicolon.
 
-```css
+```css {data-theme="light"}
 	width: 100%;
 	background-color: teal;
 ```
@@ -276,7 +276,7 @@ I'm not going to explain individual CSS properties. There's a lot of them. They 
 
 At this point, you're saying what you want something to look like, but how is this attached to the HTML? The quickest way to see the result is to inline it. Take the declarations and put them into the `style` attribute of an HTML element.
 
-```html
+```html {data-theme="light"}
 <a href="/buy"
    style="width: 100%; background-color: teal;"
    >
@@ -298,7 +298,7 @@ To build in a scalable way, the CSS should be moved into a separate file, and [`
 
 Wrap each group of declarations in braces (aka curly brackets `{}`) and put a selector in front of it to target particular elements on the page.
 
-```css
+```css {data-theme="light"}
 selectorGoesHere {
 	width: 100%;
 	background-color: teal;
@@ -323,7 +323,7 @@ When choosing selectors, the basic options are:
 
 It is normal to combine multiple classes. A base class that does most of the setup, followed by supporting classes that apply variants.
 
-```html
+```html {data-theme="light"}
 <style>
 	.cta {
 		width: 100%;
@@ -344,7 +344,7 @@ Even if the core site doesn't have issues, it may affect third-party services th
 
 It's not that tag rules should never be used, but be careful to limit it to properties that are needed every time the tag is used.
 
-```html
+```html {data-theme="light"}
 <style>
 	a {
 		background-color: teal;
@@ -362,7 +362,7 @@ It's not that tag rules should never be used, but be careful to limit it to prop
 
 [IDs](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) should normally be avoided. They're based on the assumption that this CSS will only ever be required in this single place. Using a class pre-empts the need to use it more. If you do need it, the selector starts with a hash.
 
-```html
+```html {data-theme="light"}
 <style>
 	#top {
 		background-color: teal
@@ -382,7 +382,7 @@ If you want to refer to an element that is the direct child of another, connect 
 
 If there are multiple selectors that should be styled the same, you can separate them with a comma.
 
-```html
+```html {data-theme="light"}
 <style>
 header p {
 	/* This is applied. In 2 places */
@@ -428,7 +428,7 @@ With the above selectors, you can style elements on the page, but here are a cou
 
 You can select elements by their [attributes](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors). Either just finding elements with that attribute, or by testing its value.
 
-```css
+```css {data-theme="light"}
 a[href] {
 	/* All anchor tags with an href. */
 }
