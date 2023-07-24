@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Adding stuff to the website | Cyber Pontification</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<main class="container">
+<header id="title-block-header">
+<h1 class="title">Adding stuff to the website | Cyber Pontification</h1>
+<p class="subtitle">Adding external features to the site</p>
+<p class="date">22/7/2023</p>
+<div class="abstract">
+<div class="abstract-title"></div>
+More of an intro
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#addingstufftothewebsite"
+id="toc-addingstufftothewebsite">addingStuffToTheWebsite</a>
+<ul>
+<li><a href="#new-functionality-gtm-and-third-party-code"
+id="toc-new-functionality-gtm-and-third-party-code">New functionality:
+GTM and third-party code</a></li>
+<li><a href="#support-for-sharing-open-graph"
+id="toc-support-for-sharing-open-graph">Support for sharing: Open
+Graph</a></li>
+<li><a href="#more-context-for-search-engines-schema.org"
+id="toc-more-context-for-search-engines-schema.org">More context for
+search engines: Schema.org</a></li>
+<li><a href="#security-rules-csp-and-cors"
+id="toc-security-rules-csp-and-cors">Security rules: CSP and
+CORS</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="addingstufftothewebsite">addingStuffToTheWebsite</h1>
+<p>Having read the [[front-endLanguages]] section, you have an
+understanding of the HTML we write and the styling and interactivity
+added by our agency.</p>
+<p>Now, I’m going to mention a couple of ways we add additional
+functionality and information. Plus a way to manage the risk this
+introduces.</p>
+<h2 id="new-functionality-gtm-and-third-party-code">New functionality:
+GTM and third-party code</h2>
+<p>There are businesses that offer services to enhance websites with
+additional functionality. Like chatbots, displaying data from other
+sites and user analytics. While these can be very helpful for both
+visitors and site editors, it can be difficult for non-technical people
+to set these new tools up. Or pricey to get an agency to integrate
+them.</p>
+<h3 id="google-tag-manager">Google Tag Manager</h3>
+<p>Once set up, Google Tag Manager (GTM) allows you to define chunks of
+code and inject them conditionally into your website. You can give it a
+block of HTML which may include CSS and JavaScript. These are attached
+to triggers that will cause the code to run.</p>
+<p>The easiest trigger is to run on every page load. If you need more
+selectiveness, you can specify the page URLs. This can be an exact match
+for a particular page, or partial matches to cover a group of pages.
+Useful for grabbing a section of the website.</p>
+<p>Clicks are another useful trigger, and it is possible to chain tags
+together so that chunks of code will be run consecutively. See <a
+href="https://support.google.com/tagmanager/topic/7679108">Trigger
+types</a> for a breakdown of the triggers available.</p>
+<h3 id="google-analytics">Google Analytics</h3>
+<p>GTM is an established way of loading Google Analytics (GA). GA has
+its own tag type so you don’t have to use the Custom HTML tag described
+above.</p>
+<p>After it has been added to the site, GA can observe site visitors
+behaviour. Recording the URL they entered the site from (which can
+include campaign information in a UTM code), and their journey through
+subsequent pages.</p>
+<p>Additional GTM tags can be created to monitor other events on the
+page.</p>
+<p>Change warning: The current version of Google Analytics (Universal
+Analytics) is shutting down for most people in July 2023. Paid customers
+of the current system have another year with it. The newest version is
+GA4. It has been released, but most people are still missing
+features.</p>
+<h3 id="other-analytics-services">Other analytics services</h3>
+<h4 id="clarity">Clarity</h4>
+<p>There are other analytics tools like MS Clarity, which does screen
+recordings. This is useful for observing how an individual interacts
+with the site.</p>
+<p>It also generates click heatmaps and scroll-depth maps. The click
+maps provide an aggregated view of where people have clicked on the
+page, this highlights what site users are most interested in. It is also
+useful to identify if people are clicking in places without buttons. If
+people click rapidly in an area, this is known as rage clicking.</p>
+<p>Scroll depth shows an average of how far down a page people
+scroll.</p>
+<h4 id="vwo">VWO</h4>
+<p>VWO is used to do A/B tests. This is where a piece of the page is
+swapped out for an alternative version. These versions are served to
+different users and the conversions (desired user actions) are tracked
+to see which version is the most effective.</p>
+<h3 id="the-performance-cost">The performance cost</h3>
+<p>While the additional features can enhance the user experience and
+analytics can inform business strategy, this requires the client to
+download more data. Fetching and processing additional code takes
+longer, which can deteriorate the user experience. Downloading more data
+could cost people if their internet usage is capped.</p>
+<h2 id="support-for-sharing-open-graph">Support for sharing: Open
+Graph</h2>
+<p>The <a href="https://ogp.me/">Open Graph Protocol</a> is used to
+produce a richer sharing experience. When someone links to your site,
+platforms that support Open Graph can look for additional information to
+display. Instead of just showing the URL, this preview can include a
+title, canonical URL and an image. The protocol also supports particular
+content types with additional information. Like songs, films, books,
+articles, and profiles.</p>
+<p>This information is added to the page using the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">metadata
+(<code>meta</code>)</a> tag in the <code>head</code>. Using the example
+from the Open Graph website:</p>
+<div class="sourceCode" id="cb1" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span> <span class="er">prefix</span><span class="ot">=</span><span class="st">&quot;og: https://ogp.me/ns#&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>The Rock (1996)<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">property</span><span class="ot">=</span><span class="st">&quot;og:title&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;The Rock&quot;</span> <span class="dt">/&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">property</span><span class="ot">=</span><span class="st">&quot;og:type&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;video.movie&quot;</span> <span class="dt">/&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">property</span><span class="ot">=</span><span class="st">&quot;og:url&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;https://www.imdb.com/title/tt0117500/&quot;</span> <span class="dt">/&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">property</span><span class="ot">=</span><span class="st">&quot;og:image&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;https://ia.media-imdb.com/images/rock.jpg&quot;</span> <span class="dt">/&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>For each Open Graph property, you make a <code>meta</code> tag. You
+put the property name from the protocol website
+(e.g. <code>og:title</code>) into the <code>property</code> attribute.
+Then the value (e.g. <code>The Rock</code>) goes into the
+<code>content</code> attribute.</p>
+<p>There’s also a <code>prefix</code> attribute on <code>html</code>.
+This allows <code>og</code> to be used as an abbreviation while the
+computer can still understand it as a full URL. The URL is used as a
+unique identifier, as any competing standards wouldn’t use the Open
+Graph domain in their identifiers.</p>
+<h2 id="more-context-for-search-engines-schema.org">More context for
+search engines: Schema.org</h2>
+<p>While Google can explore your site and get a good understanding of
+the content by itself, using the Schema.org syntax allows you to be more
+explicit about the content. You can describe your business, its
+location, opening times and reviews. There’s syntax for events, recipes,
+and courses. Plus many more.</p>
+<p>While there are more types available on the <a
+href="https://schema.org/docs/schemas.html">schema.org website</a> . It
+is probably more effective to focus on <a
+href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery">the
+ones that google supports</a>. This information may be displayed in the
+Search Engine Results Page (SERP).</p>
+<h2 id="security-rules-csp-and-cors">Security rules: CSP and CORS</h2>
+<p>Here are a couple of protocols for security, they limit where
+resources can be used.</p>
+<h3 id="content-security-policy">Content Security Policy</h3>
+<p>Content Security Policy (CSP) allows you to specify which domains the
+page is allowed to fetch resources from. This is a good security measure
+against unwanted code being injected and run on your site, which could
+happen through GTM or from user submitted content.</p>
+<p>This information is served in the network request header. It can
+individually regulate these resource types:</p>
+<ul>
+<li>Scripts</li>
+<li>Styles</li>
+<li>Fonts</li>
+<li>Images</li>
+<li>Video and audio</li>
+<li>iframes</li>
+</ul>
+<h3 id="cross-origin-resource-sharing">Cross-Origin Resource
+Sharing</h3>
+<p>While CSP protects your front-end from untrusted servers.
+Cross-Origin Resource Sharing (CORS) protects your server from talking
+to unknown servers or clients. This is applied to the server.</p>
+<p>This is something that shouldn’t be an issue for a content team but
+if an integration isn’t working, a quick look at the dev tools console
+may be helpful.</p>
+</main>
+</body>
+</html>

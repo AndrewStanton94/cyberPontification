@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Infrastructure | Cyber Pontification</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<main class="container">
+<header id="title-block-header">
+<h1 class="title">Infrastructure | Cyber Pontification</h1>
+<p class="subtitle">Where the browser gets something to show you</p>
+<p class="date">22/7/2023</p>
+<div class="abstract">
+<div class="abstract-title"></div>
+More of an intro
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#infrastructure" id="toc-infrastructure">infrastructure</a>
+<ul>
+<li><a href="#server-languages" id="toc-server-languages">Server
+languages</a></li>
+<li><a href="#hosting" id="toc-hosting">Hosting</a></li>
+<li><a href="#content-delivery-networks-and-caching"
+id="toc-content-delivery-networks-and-caching">Content Delivery Networks
+and Caching</a></li>
+<li><a href="#ip-addresses" id="toc-ip-addresses">IP addresses</a></li>
+<li><a href="#web-addresses-urls" id="toc-web-addresses-urls">Web
+Addresses (URLs)</a></li>
+<li><a href="#dns" id="toc-dns">DNS</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="infrastructure">infrastructure</h1>
+<p>With what we’ve covered so far, you’ve got web pages that look good
+and can respond to external data, enhanced by external services. But how
+do we share this with the world and write our own APIs?</p>
+<h2 id="server-languages">Server languages</h2>
+<p>If you’re creating your own API, you will probably need to code
+something. While any established programming language is likely to have
+code that allows it to respond to network requests, these are some
+common and rising languages:</p>
+<dl>
+<dt>Java</dt>
+<dd>
+<p>A language that is well established in enterprise. Java programs are
+compiled (pre-built) so they are in theory faster than interpreted
+languages (code processed as needed).</p>
+</dd>
+<dt>PHP</dt>
+<dd>
+<p>A widely supported and widely used language. It was designed for the
+web. It’s the language that Drupal and WordPress are written in. There’s
+a low barrier to entry meaning a lot of code has been written in PHP,
+some of it isn’t so good, which can fuel disparagement from fans of
+other languages.</p>
+</dd>
+<dt>Python</dt>
+<dd>
+<p>A general purpose language that’s used in a lot of fields, which
+includes the web.</p>
+</dd>
+<dt>Node.js</dt>
+<dd>
+<p>This is JavaScript, the front-end language, running on the server. An
+advantage is not needing to learn another language to handle the
+backend, in addition to the front-end.</p>
+</dd>
+<dt>Go and Rust</dt>
+<dd>
+<p>These are newer languages. They are compiled like Java.</p>
+</dd>
+</dl>
+<h2 id="hosting">Hosting</h2>
+<p>This is where your code will run. There are options that can cheaply
+serve personal blogs, through to the kit that keeps massive commercial
+sites going.</p>
+<h3 id="cms-focused">CMS focused</h3>
+<p>If you have a particular CMS in mind, there’s likely to be hosting
+options tailored to it. This can get you up and running quickly, but it
+may be more locked down than other options. You may have less control,
+with the company managing low-level tasks for you.</p>
+<h3 id="basic-hosting">Basic hosting</h3>
+<p>If you have a static site, one that only uses HTML, CSS and
+JavaScript, then basic hosting is fine. It will give you space to upload
+files and your code will share a server with other people. This keeps
+the costs low, but it’s not designed for large amounts of traffic. If
+others on the server have a lot of traffic, then your site’s performance
+may deteriorate. If you’re the popular one, the company is likely to get
+you to move to something more powerful (and pricey).</p>
+<p>This hosting might also be able to run PHP as this is a widely used
+web language. Other languages may be supported but these might be more
+fiddly to set up.</p>
+<h3 id="virtual-private-server">Virtual Private Server</h3>
+<p>If this isn’t enough, you need a Virtual Private Server (VPS). This
+removes the limitations of basic hosting as you have full access to a
+computer in the cloud. Allowing you to set up all the software you
+require.</p>
+<h3 id="enterprise-solutions">Enterprise solutions</h3>
+<p>While individuals should be satisfied with a VPS, organisations are
+likely to be more demanding.</p>
+<p>Requiring a cluster of compute nodes to provide resilience and
+failover. In addition to networking equipment, separate databases and
+file storage. There are a lot of options. See this <a
+href="https://aws.amazon.com/products">Amazon Web Services (AWS) product
+page</a> for an example.</p>
+<h2 id="content-delivery-networks-and-caching">Content Delivery Networks
+and Caching</h2>
+<p>Content Delivery Networks (CDNs) are global networks of servers. They
+serve your content. By using a CDN, your content should be closer to
+your users. Which speeds up response times and makes users less likely
+to give up on your page and bounce (leave without interacting with the
+site).</p>
+<p>Caching is the strategy of saving a copy of the requested resource.
+This can happen at multiple stages between the server and your device.
+This is great for performance, but it can be an issue if an older
+version has been saved.</p>
+<h2 id="ip-addresses">IP addresses</h2>
+<p>Internet Protocol (IP) addresses are how computers identify the
+machine they want to reach. There is a widely used version which is
+running out of addresses, and there’s a newer format that isn’t as
+widely supported.</p>
+<h3 id="version-4-ipv4">Version 4 IPv4</h3>
+<p>(<code>ww.xx.yy.zz</code>)</p>
+<p>This is the widely used version. There’s over 4 billion
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msup><mn>10</mn><mn>9</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(10^9)</annotation></semantics></math>
+addresses. However, there are private ranges for use within home or
+organisation networks. This means there are less public IP addresses to
+use on the internet. Network equipment is able to take internet traffic
+and route it to the right device on your private network.</p>
+<p>IPv4 addresses are made from 4 groups of digits 0 to 255 separated by
+full stops. The number 255 is significant as it’s the largest number
+that can be represented by 2 hexadecimal digits
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>16</mn><mn>2</mn></msup><annotation encoding="application/x-tex">16^2</annotation></semantics></math>.</p>
+<h3 id="version-6-ipv6">Version 6 IPv6</h3>
+<p>(<code>ssss:tttt:uuuu:vvvv:wwww:xxxx:yyyy:zzzz</code>)</p>
+<p>There’s a lot more IPv6 addresses.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>28</mn></msup><annotation encoding="application/x-tex">10^{28}</annotation></semantics></math>
+of them. They are made from 8 groups of 4 hexadecimal digits (which
+covers 0 to 65,365). These groups are separated by colons. Segments may
+be omitted if they are all 0.</p>
+<p>Hexadecimal is used because it represents 16 values in one character
+(using 0-9 and then A-F). This is the equivalent of 4 binary digits,
+which the computer uses. Hexadecimal is easier for humans to work with
+than binary, and it’s easier for the computer to convert hexadecimal
+back to binary than decimal to binary.</p>
+<h2 id="web-addresses-urls">Web Addresses (URLs)</h2>
+<p>Uniform Resource Locators (URLs) are how we identify a piece of
+content online. These are the components:</p>
+<p><code>scheme:[//[user[:password]@]domain[:port]][/path][?query][#fragment]</code></p>
+<h3 id="protocol">Protocol</h3>
+<p>The language that is used to communicate with the server. While there
+are many protocols, we mostly use HTTP and HTTPS. This is at the start
+of the URL and is followed by <code>://</code></p>
+<p>HTTPS is the secure version of HTTP, this just means the traffic
+between your computer and the server is encrypted. So anyone that
+monitors network traffic can see you’ve connected to a domain, but they
+can’t see what you’re doing there.</p>
+<h3 id="domain">Domain</h3>
+<p>This is the identifier of the system you’re connecting to. It’s the
+chunks of text separated by a full stop. They form a hierarchy from
+right to left.</p>
+<p>The first segment or two is the Top Level Domain. This gives a hint
+about the sort of website it is. <code>com</code> for commercial sites,
+and Geographic TLDs (gTLDs) identify the country of the website. New
+TLDs have been released in recent years which can convey more
+information about the website.</p>
+<p>Different TLDs are managed by different organisations and they have
+varying eligibility criteria. The domains are brought through Domain
+Name Registrars for a time period of one or more years.</p>
+<p>Once you have a domain, you can use DNS to point to where the site is
+hosted using its IP address.</p>
+<p>You can also create subdomains to point to additional services.</p>
+<h3 id="path">Path</h3>
+<p>This is a representation of where the page is on the server, with the
+different levels separated by slashes. These levels can be an actual
+file system on the server, or a way of building up a request for an API
+(a website can be a mix of both). This works well when there is a clear
+hierarchy to the request. On a blog, <code>/posts</code> could list all
+the articles. <code>/posts/5</code> will fetch the fifth post, and
+<code>/posts/5/likes</code> could show all the users who like this
+post.</p>
+<p>When serving files, a path should end with either a slash or a file
+with an extension. The slash means it is asking for the directory
+(folder), this can either return a list of all the files in that
+directory or look for an index file. This is just the default file to
+serve. This nuance isn’t apparent to the user as the browser will append
+a slash if required.</p>
+<h3 id="query-string">Query string</h3>
+<p>The other way of providing information is through a query string.
+This part of the URL starts with a question mark <code>?</code>. They
+are key-value pairs, with the key and value joined by an equals sign
+<code>=</code>. An ampersand <code>&amp;</code> is used between these
+pairs.</p>
+<p>This data can be used by the server or by the client. The server can
+perform additional processing before sending out data, and Google
+Analytics looks for particular attributes when it runs on the
+client.</p>
+<h3 id="fragment">Fragment</h3>
+<p>The fragment starts with a hash <code>#</code> and it is used to jump
+to a section of the page. It looks for an element with an ID that
+matches the fragment text.</p>
+<h3 id="other-bits">Other bits</h3>
+<p>I’m also mentioning these for thoroughness but they’re less likely to
+be used on public sites:</p>
+<h4 id="ports">Ports</h4>
+<p>After the domain, you may see a colon and then a number. This is the
+port. These are not normally included as protocols have default
+ports.</p>
+<ul>
+<li>HTTP on port 80</li>
+<li>HTTPS on port 443</li>
+</ul>
+<p>The port acts as a door. Only one service can use a port at a time,
+so using another port allows a domain to offer multiple services. This
+could be useful during development but offering more from a single
+server increases the impact if the server goes down.</p>
+<p>People may also move services to other ports to make them more
+difficult to find: security through obscurity. This has the twin
+drawbacks of making it more difficult for users to access, while not
+offering much protection.</p>
+<h4 id="user-credentials">User credentials</h4>
+<p>It is possible to provide credentials to log into some sites. This is
+done by putting a username (optionally with a password, separated by a
+colon) before the domain. Using an at <code>@</code> sign to link the
+credentials to the domain.</p>
+<p>I haven’t used this, and sending a password in this way may expose it
+to other people.</p>
+<h2 id="dns">DNS</h2>
+<p>Domain Name Service: The phone book of the internet. It translates
+domain names that are easy for people to understand into the IP
+addresses that computers use.</p>
+<p>These are a few types of DNS records:</p>
+<dl>
+<dt><code>A</code></dt>
+<dd>
+<p>Maps a domain name to an IPv4 address</p>
+</dd>
+<dt><code>AA</code></dt>
+<dd>
+<p>Maps a domain name to an IPv6 address</p>
+</dd>
+<dt><code>CNAME</code> (Canonical name)</dt>
+<dd>
+<p>Used to make one domain an alias for another</p>
+</dd>
+<dt><code>MX</code></dt>
+<dd>
+<p>Used to identify an email server.</p>
+</dd>
+<dt><code>TXT</code></dt>
+<dd>
+<p>A way of adding notes to DNS. This is used for security features.
+Adding a code to prove to other service providers that you own that
+domain. It also provides additional information to help secure
+email.</p>
+</dd>
+</dl>
+</main>
+</body>
+</html>

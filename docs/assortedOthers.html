@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Assorted others | Cyber Pontification</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<main class="container">
+<header id="title-block-header">
+<h1 class="title">Assorted others | Cyber Pontification</h1>
+<p class="subtitle">A couple more things I wanted to mention that didn’t
+fit into the</p>
+<p class="date">22/7/2023</p>
+<div class="abstract">
+<div class="abstract-title"></div>
+More of an intro
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#assortedothers" id="toc-assortedothers">assortedOthers</a>
+<ul>
+<li><a href="#markdown" id="toc-markdown">Markdown</a></li>
+<li><a href="#regex" id="toc-regex">RegEx</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="assortedothers">assortedOthers</h1>
+<h2 id="markdown">Markdown</h2>
+<p>While HTML is a powerful language for creating documents, there are
+times when a simpler syntax is sufficient.</p>
+<p>Markdown uses symbols to offer a subset of HTML. This has the
+benefits of being more concise and readable, even when the symbols
+haven’t been converted to a display format.</p>
+<p>Markdown covers headers, links, lists, and emphasis. People have
+expanded the syntax to include new features, like tables, call-outs and
+definition lists.</p>
+<p>It’s not a language supported by browsers, but it can be converted to
+HTML and an increasing number of websites use this for user provided
+content.</p>
+<p>Here are a couple of sites showing the syntax:</p>
+<ul>
+<li><a href="https://www.markdown-cheatsheet.com/">markdown cheat
+sheet</a></li>
+<li><a href="https://www.markdownguide.org/basic-syntax">Basic
+Syntax</a></li>
+</ul>
+<h2 id="regex">RegEx</h2>
+<p>Regular Expression (RegEx) is a syntax that allows people to search
+for a pattern. Rather than just looking for a particular term, you can
+specify what characters you want and how many times they should
+appear.</p>
+<p>You can use a vertical bar <code>|</code> if there are multiple
+choices. E.g. <code>cat|dog</code></p>
+<p>It’s also possible to use character sets. Either predefined ones
+(covering letters, numbers, or spaces), or your own groups of
+characters. This can be paired with quantifiers.</p>
+<p>Quantifiers can be explicit numbers, or vaguer categories. By
+default, regexes are greedy. They will look for the largest possible
+match and reduce until all segments of the regex are used.</p>
+<p>One of the simplest regex’s is <code>.*</code>. Which means any
+character any number of times. This is useful if you need to capture
+everything between other specific items.</p>
+<p>This regex will match on an IPv6 segment <code>[0-9A-Fa-f]{4}</code>.
+The square brackets describe the characters you want. In this case, the
+ranges 0 to 9 and the letters A to F in both upper and lower cases. The
+4 in the braces specify how many times you want the preceding group.</p>
+<p>If you need to work with regexes then a site like <a
+href="https://regex101.com/">regex101</a> is useful as it explains the
+regex and allows you to test it against examples. Unless you’re working
+with one of the other languages given in the “Flavor” list, choose
+<code>ECMAScript (JavaScript)</code>. Screaming Frog is written in Java,
+so that’s one exception.</p>
+</main>
+</body>
+</html>

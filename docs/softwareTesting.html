@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Software Testing | Cyber Pontification</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<main class="container">
+<header id="title-block-header">
+<h1 class="title">Software Testing | Cyber Pontification</h1>
+<p class="subtitle">Types of testing to consider</p>
+<p class="date">22/7/2023</p>
+<div class="abstract">
+<div class="abstract-title"></div>
+More of an intro
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#softwaretesting"
+id="toc-softwaretesting">softwareTesting</a>
+<ul>
+<li><a href="#unit-testing" id="toc-unit-testing">Unit testing</a></li>
+<li><a href="#integration-testing"
+id="toc-integration-testing">Integration testing</a></li>
+<li><a href="#exploratory-ad-hoc-testing"
+id="toc-exploratory-ad-hoc-testing">Exploratory (ad-hoc)
+testing</a></li>
+<li><a href="#functional-testing" id="toc-functional-testing">Functional
+testing</a></li>
+<li><a href="#non-functional-testing"
+id="toc-non-functional-testing">Non-functional testing</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="softwaretesting">softwareTesting</h1>
+<p>Testing is a process for checking that your software works as
+expected. There are multiple stages and types that can (and should) be
+used.</p>
+<p>I’ve listed a few types here. If you want an overwhelming list, check
+out <a
+href="https://www.guru99.com/types-of-software-testing.html">Types of
+software testing (100 examples)</a></p>
+<h2 id="unit-testing">Unit testing</h2>
+<p>Developers write these tests to ensure their code is behaving
+correctly at the lowest levels.</p>
+<p>These tests should be automated so that they can be run easily and
+breakages can be discovered as soon as possible.</p>
+<h2 id="integration-testing">Integration testing</h2>
+<p>This is used to ensure that the self-contained units of code will
+work together. This can be an issue if different teams are working on
+the code in parallel and there may be different assumptions.</p>
+<h2 id="exploratory-ad-hoc-testing">Exploratory (ad-hoc) testing</h2>
+<p>The tester tries to use the system and sees what issues occurs. With
+experienced testers, this is a good way to discover defects without the
+process and documentation that other methods require.</p>
+<h2 id="functional-testing">Functional testing</h2>
+<p>Functional testing uses a test plan to describe what a system should
+do as a series of requirements.</p>
+<p>Behaviour Driven Development (BDD) is a popular structure for these
+tests.</p>
+<blockquote>
+<p>Given [initial context and setup]<br />
+When [something happens]<br />
+Then [expected result]</p>
+</blockquote>
+<p>If a functional test fails, the BDD structure helps with bug reports.
+This should also include a description of the expected and the actual
+results.</p>
+<h3 id="system-testing">System testing</h3>
+<p>Does it work on the expected hardware? This is also known as
+Configuration testing when multiple combinations are tested.</p>
+<h3 id="end-to-end-testing">End-to-end testing</h3>
+<p>This describes a user journey through the system. Can a use achieve
+their goals using the site?</p>
+<h2 id="non-functional-testing">Non-functional testing</h2>
+<p>This is a broad category of tests that aren’t covered by the
+functional requirements. They are equally important as the functional
+tests, but it can be more challenging to specify what is good enough up
+front.</p>
+<h3 id="accessibility">Accessibility</h3>
+<p>This ensures that everyone can use the product. This is essential as
+alienating users with an unusable site is a bad move, and it’s a legal
+requirement.</p>
+<p>On the web, accessibility can be increased by the use of semantic
+HTML (with supporting technologies like ARIA) to provide maximum clarity
+for accessibility software to communicate with users. Colour contrast is
+another important consideration.</p>
+<h3 id="security">Security</h3>
+<p>This looks for ways the site could be compromised. This is a priority
+for any site that handles any personal or sensitive data, but any site
+breach is bad for the business.</p>
+<p>Attackers could just vandalise the site, causing damage and
+data-loss, or they could subtly alter data, making the site less
+attractive than the competitors.</p>
+<h3 id="performance">Performance</h3>
+<p>Your site does everything it needs to do safely and accessibly, but
+how many people can use the site at the same time?</p>
+<p>Performance tests check that the site can handle the expected number
+of users. This can check how the site handles prolonged usage, and also
+rapid increases, which requires the site to scale up quickly.</p>
+<h3 id="user-acceptance">User Acceptance</h3>
+<p>Hopefully the early stages of the project will have accurately
+captured all the requirements and these have been implemented as
+designed. This testing validates this assumption and checks if the users
+are happy with the product.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Developer stuff | Cyber Pontification</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<main class="container">
+<header id="title-block-header">
+<h1 class="title">Developer stuff | Cyber Pontification</h1>
+<p class="subtitle">A few developer terms that might be of interest</p>
+<p class="date">22/7/2023</p>
+<div class="abstract">
+<div class="abstract-title"></div>
+More of an intro
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#developerstuff" id="toc-developerstuff">developerStuff</a>
+<ul>
+<li><a href="#semantic-versioning" id="toc-semantic-versioning">Semantic
+versioning</a></li>
+<li><a href="#code-stuff" id="toc-code-stuff">Code stuff</a></li>
+<li><a href="#git" id="toc-git">Git</a></li>
+<li><a href="#docker-and-kubernetes"
+id="toc-docker-and-kubernetes">Docker and Kubernetes</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="developerstuff">developerStuff</h1>
+<p>Here are some terms that you shouldn’t need to worry about but they
+might be interesting if you encounter them.</p>
+<h2 id="semantic-versioning">Semantic versioning</h2>
+<p>When developers need to track version numbers, we tend to use
+Semantic Versioning. These are three numbers separated by a full stop.
+The first release will be <code>1.0.0</code>. Future updates will
+increment one of these numbers depending on the sort of change.</p>
+<p>The smallest change is a patch. Representing a correction to the
+code. This using the digit on the right. I have fixed a bug, so I
+release version <code>1.0.1</code>.</p>
+<p>When I add new features, I release either a minor (middle number), or
+major (left number) version. The differentiating factor is if the change
+is breaking.</p>
+<p>A minor (non-breaking) change means that the new version will be
+compatible with the previous versions. We get new features and the
+current ones won’t (intentionally) break. This becomes release
+<code>1.1.1</code>.</p>
+<p>A major (breaking) release will be more disruptive. Some parts of the
+code won’t work in the same way as they used to, and this will require
+changes by people using this code. This breaking change is
+<code>2.0.0</code></p>
+<p>The major/minor version difference is the most obvious in APIs or
+software that is used by other programs. For applications with users,
+the major version could be for scheduled releases or to denote a major
+UI change.</p>
+<h2 id="code-stuff">Code stuff</h2>
+<h3 id="libraries-and-frameworks">Libraries and Frameworks</h3>
+<p>These are both bundles of code that can be added to your project to
+make things easier. This code already exists, and if there’s a community
+around it, that shows other people see the benefits from it. They have
+hopefully already found and fixed the bugs that you would otherwise
+encounter by making your own solution.</p>
+<p>The difference between these terms is that a library offers a set of
+tools you can pick from. This is helpful to fill in the gaps.</p>
+<p>Whereas a framework tends to solve a particular problem in a
+particular way. As long as their method makes sense to you, and you can
+follow their structure, this can offer a significant speed-up.</p>
+<h3 id="linters-formatters-and-minifiers">Linters, formatters, and
+minifiers</h3>
+<p>These are some tools developers use when writing code.</p>
+<dl>
+<dt>Linters</dt>
+<dd>
+<p>These review the code for known issues. Highlighting them explicitly
+before they cause problems while running.</p>
+</dd>
+<dt>Formatters</dt>
+<dd>
+<p>Using formatters ensures that the code looks the same across the
+project. This consistency helps during code review and saves people
+debating the layout rather than what the code does.</p>
+</dd>
+<dt>Minifiers</dt>
+<dd>
+<p>These compress the code down to reduce size when sending it to the
+client. They remove all unneeded spaces and can rename variables to make
+them shorter.</p>
+</dd>
+</dl>
+<h2 id="git">Git</h2>
+<p>Git is a version control system, used to track changes in code (or
+other text based projects). It was created by Linus Torvalds, the
+initial developer of the Linux kernel: The core of the superior
+Operating System.</p>
+<p>Git allows people to collaborate on code. The project is called a
+repo (repository). Each developer <code>clone</code>s the repository to
+their machine from a remote source.</p>
+<p>People work independently on their own local copies of the repo.
+Changes are saved as snapshots called <code>commits</code>. They include
+instructions for git to update the code (a <code>diff</code>), and a
+description of the changes for users to understand the purpose of the
+commit.</p>
+<p>It is important to keep your code in sync with other collaborators.
+You <code>pull</code> down their changes and <code>push</code> your
+commits back up. If others have made changes to the same code, you get a
+<code>merge conflict</code> which has to be resolved manually.</p>
+<p>When working on complex projects, <code>branch</code>es are helpful.
+These allow you to work on new features or bug fixes separately, and
+then <code>merge</code> your commits back in once they are complete. You
+may have to do a <code>pull request</code> before your branch can be
+merged in. This allows code to be reviewed by other collaborators
+first.</p>
+<h3 id="github">GitHub</h3>
+<p>The collaborative nature of Git requires a place to store the code.
+While developers could pull changes from each other’s computers, this
+requires them to be turned on at the same time and reachable over the
+network/internet. So the simplest solution is to have a server that
+everyone uses. The most popular site for this is GitHub.</p>
+<p>GitHub hosts the code, it also offers an issue tracker and some basic
+project management tools. GitHub pages allow you to host a static
+website. There is also GitHub Actions which can run tasks. Either on a
+schedule or in response to changes to the repo. This can be used to run
+automated testing on the new commits.</p>
+<h2 id="docker-and-kubernetes">Docker and Kubernetes</h2>
+<p>An issue with a team developing an application is the need to have a
+consistent environment. Different Operating Systems and program versions
+could lead to different results. And this is likely to be different from
+where the code runs in production.</p>
+<p>Virtual machines were a good starting point, as this allowed people
+to work with a more consistent environment. However, they are rather
+resource intensive as they have to simulate everything from the hardware
+up.</p>
+<p>Containers are more efficient as they only have to simulate things
+from the Operating System up. By using a Dockerfile, you can choose an
+existing docker image (a template for the operating system that’s ready
+to run) and run additional commands on top of it to produce a docker
+image that is configured for your situation.</p>
+<p>Kubernetes (Abbreviated as K8s, the Greek word for helmsman) is a
+container orchestration tool. You specify how many containers you want
+running, and Kubernetes will start them up and keep them running.
+Replacing any broken instances as needed.</p>
+</main>
+</body>
+</html>

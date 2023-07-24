@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Front-end languages | Cyber Pontification</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<main class="container">
+<header id="title-block-header">
+<h1 class="title">Front-end languages | Cyber Pontification</h1>
+<p class="subtitle">The languages that put things on your screen</p>
+<p class="date">22/7/2023</p>
+<div class="abstract">
+<div class="abstract-title"></div>
+More of an intro
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#front-endlanguages"
+id="toc-front-endlanguages">front-endLanguages</a>
+<ul>
+<li><a href="#html" id="toc-html">HTML</a></li>
+<li><a href="#css" id="toc-css">CSS</a></li>
+<li><a href="#javascript" id="toc-javascript">JavaScript</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="front-endlanguages">front-endLanguages</h1>
+<p>The client is the device the site visitor uses to access websites. We
+need three front-end languages to make interactive webpages: HTML, CSS
+and JavaScript.</p>
+<h2 id="html">HTML</h2>
+<p>The first web language is HTML: Hyper Text Markup Language. This is a
+document intended to be linked to other documents (Hyper Text). It’s
+marked up to tell the computer how to display it. With this, you can
+present information to site visitors.</p>
+<p>The document has two parts. The <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"><code>head</code></a>,
+and the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"><code>body</code></a>.
+What you see on the page appears in the <code>body</code>. The
+<code>head</code> provides additional information. Like the document
+title and description, which search engines use (unless Google thinks it
+knows better). The <code>head</code> also links to other resources which
+are added to the page.</p>
+<p>When you add this additional information to your document, you use
+HTML tags. There is an opening tag, then your content and a closing tag.
+Together, this is called an element. The opening tag consists of a
+less-than sign <code>&lt;</code>, the tag name, then there may be some
+extra information known as attributes, followed by a more-than sign
+<code>&gt;</code>.</p>
+<p>The closing tag puts a forward slash <code>/</code> between the
+less-than sign and the tag name. It won’t have any attributes.</p>
+<div class="sourceCode" id="cb1" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- Information for the computer goes here --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- The content for the humans to enjoy --&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="html-tags">HTML tags</h3>
+<p>Here are some examples of HTML tags, I’ll start with text formatting
+ones and zoom out.</p>
+<h4 id="strong-and-emphasis">Strong and Emphasis</h4>
+<p>If you want to draw attention to pieces of text, you will use the
+emphasis <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>em</code></a>
+and the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>strong</code></a>
+tags.</p>
+<p>While these normally translate to italics and bold, they don’t have
+to. You can create your own conventions for your site, and people using
+assistive technologies, like screen readers, will perceive it
+differently. When writing, focus on the tag goal, rather than the usual
+implementation.</p>
+<div class="sourceCode" id="cb2" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>These tags are useful for highlighting <span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span>the important bits<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span>. They should be used <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>in moderation<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span> as too much styling can reduce the impact and make it more difficult to read.</span></code></pre></div>
+<h4 id="paragraph">Paragraph</h4>
+<p>The <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">paragraph
+(<code>p</code>)</a> tag represents a chunk of text with a common theme.
+Then the browser can put space around these elements. This is important
+as HTML compresses multiple space characters and line breaks into a
+single space. This allows people writing HTML directly to format their
+code without these characters showing up for site visitors.</p>
+<div class="sourceCode" id="cb3" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a chunk of text with a single theme or goal. It&#39;s a paragraph.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a second paragraph. The indent at the start of the line won&#39;t be displayed<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="line-breaks">Line breaks</h4>
+<p>Sometimes we need to ensure that pieces of text are displayed on
+different lines, for example in addresses. In these cases, we use the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br">break
+<code>&lt;br&gt;</code> tag</a>. These are placed where you want the
+line break to happen.</p>
+<p>While the break tag is a valid choice in some circumstances, please
+review writing that has been brought in from other sources, in case they
+are using breaks when paragraph tags would be more suitable.</p>
+<h4 id="headers">Headers</h4>
+<p>When you have a lot of text, headers are critical to add structure to
+the page. There are 6 levels. <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"><code>h1</code>
+to <code>h6</code></a>, where 1 is the largest and 6 is the
+smallest.</p>
+<p>There should only be one <code>h1</code> per page, but you can use
+the other levels as many times as needed.</p>
+<p>When creating a sub heading, use the level directly under the parent
+heading. A <code>h3</code> under a <code>h2</code>. Don’t skip levels.
+This can be tempting if the correct header looks too big, but this
+causes accessibility issues. Headings provide information about the
+structure of the document.</p>
+<div class="sourceCode" id="cb4" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>The page title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>A bit of text to introduce the page.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>First main theme<span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Talking about the first theme<span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>An important part of the first theme<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>A deep dive on this part<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Second main theme<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="lists">Lists</h4>
+<p>There are two basic types of lists: <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">Ordered
+<code>ol</code> (numbered)</a> and <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">unordered
+<code>ul</code> (bullet points)</a>.</p>
+<p>They require two tags. A container must be created to declare which
+type of list you want using <code>ol</code> or <code>ul</code>. Then use
+the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li">list
+item (<code>li</code>)</a> tag to wrap each individual item.</p>
+<div class="sourceCode" id="cb5" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Hampshire cities<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>A list without rank<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>Portsmouth<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>Winchester<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Portsmouth train stations<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Ordered heading towards London<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">ol</span><span class="dt">&gt;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>Portsmouth Harbour<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>Portsmouth <span class="dv">&amp;amp;</span> Southsea<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>Fratton<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">ol</span><span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="hyperlinks">Hyperlinks</h4>
+<p>To create links, we use the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>a</code>
+(anchor)</a> tag. This requires an attribute, <code>href</code> to
+specify where the link goes.</p>
+<p>When linking to an external site, you give the full URL
+<code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em</code>.
+If you’re linking to another page on the same site, you only need to
+provide the path <code>/en-US/docs/Web/HTML/Element/em</code>.</p>
+<div class="sourceCode" id="cb6" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    href=</span><span class="st">&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em&quot;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&gt;</span>Learn about the em tag on MDN</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ot">    href=</span><span class="st">&quot;/another/page&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&gt;</span>Check out this other page on this site</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="html-attributes">HTML Attributes</h4>
+<p>Attributes provide additional details about an element. Sometimes you
+just need to add the attribute name to enable something. Usually you
+also need to give it a value. The value is wrapped in double quotes and
+connected to the attribute name with an equals sign.</p>
+<p>Some tags have their own specific attributes (like <code>href</code>)
+but there are some <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes">global
+attributes</a> available to all tags. For example:</p>
+<dl>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"><code>id</code></a></dt>
+<dd>
+<p>Use this to identify an element. Each value should be unique within
+the page. IDs can be used to jump to a part of the page. Pair it with an
+<code>a</code> tag and start the <code>href</code> value with a
+<code>#</code>, then add the ID.</p>
+</dd>
+</dl>
+<div class="sourceCode" id="cb7" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;top&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>This is the introductory paragraph.</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;#top&quot;</span><span class="dt">&gt;</span>Top of the page<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<dl>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class"><code>class</code></a></dt>
+<dd>
+<p>These are labels. They are normally used with CSS to change the
+element’s appearance. An element can have multiple classes separated by
+spaces.</p>
+</dd>
+</dl>
+<div class="sourceCode" id="cb8" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/buy&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;cta cta-primary&quot;</span><span class="dt">&gt;</span>Buy now<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<dl>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style"><code>style</code></a></dt>
+<dd>
+<p>Use this to add CSS rules directly to an element. It can be useful,
+but having separate CSS activated by a class is better if this is
+required in multiple places.</p>
+</dd>
+</dl>
+<div class="sourceCode" id="cb9" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/buy&quot;</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;width: 100%&quot;</span><span class="dt">&gt;</span>Buy now<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<dl>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*"><code>data-</code></a></dt>
+<dd>
+<p>A prefix for developer defined fields. This can be used by JavaScript
+to store useful information.</p>
+</dd>
+</dl>
+<h4 id="images">Images</h4>
+<p>A tag that depends on attributes is the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">image
+<code>img</code></a> tag. This uses the <code>src</code> to define the
+image URL and <code>alt</code> to provide alternative text if the image
+cannot be displayed. This could be due to the image being unavailable,
+or because the software the site visitor is using can’t display the
+image. Search engines also use this attribute to understand the
+image.</p>
+<p>The <code>img</code> tag doesn’t need a closing tag. It is the
+instruction to insert an image rather than annotating existing text.</p>
+<div class="sourceCode" id="cb10" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    src=</span><span class="st">&quot;https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993&quot;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    alt=</span><span class="st">&quot;A white dog with long hair in front of a pink background&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>There is also a <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"><code>picture</code>
+tag</a> which allows you to offer multiple versions of the image. These
+cover different image dimensions and file formats, to select the most
+suitable option for the device the visitor is using.</p>
+<h4 id="page-structure">Page structure</h4>
+<p>When you have control over the entire page, it is useful to mark up
+regions. This gives context for search engines and accessibility
+tools.</p>
+<p>There are:</p>
+<dl>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"><code>main</code></a></dt>
+<dd>
+<p>This contains the core content of the page. The reason visitors are
+here. Each page should only have one <code>main</code> element.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><code>article</code></a></dt>
+<dd>
+<p>This is a self-contained piece of content that could be shared in
+isolation. A page can have multiple articles.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside"><code>aside</code></a></dt>
+<dd>
+<p>A way of identifying content that is loosely connected to the main
+content.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"><code>nav</code></a></dt>
+<dd>
+<p>This is a region used for navigation. This can be within the page, or
+linking to other pages.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><code>header</code></a>
+and <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer"><code>footer</code></a></dt>
+<dd>
+<p>These introduce or wrap up the content. This can either be the entire
+page, or the other regions in this list.</p>
+</dd>
+</dl>
+<div class="sourceCode" id="cb11" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">nav</span><span class="dt">&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">article</span><span class="dt">&gt;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">aside</span><span class="dt">&gt;</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">aside</span><span class="dt">&gt;</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">article</span><span class="dt">&gt;</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;/</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="semantic-html">Semantic HTML</h3>
+<p>The use of the <code>strong</code>, <code>em</code> and page
+structure tags allows you to provide additional meaning to the document.
+This helps search engines and accessibility tools to understand the
+page. Without this, these tools would have to guess, or developers would
+have to provide information in other ways.</p>
+<p>The opposite of semantic tags are <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"><code>span</code></a>
+and <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"><code>div</code></a>.
+These have no additional information, so they’re an option for
+developers, but content writers have better options. If you see these
+tags in user submitted content, they were probably copied
+unintentionally from other websites. You can either remove them in an
+HTML view, or use Ctrl-Shift-V to paste the text in without
+formatting.</p>
+<h2 id="css">CSS</h2>
+<p>Using HTML will give you a website that both humans and computers can
+understand. However, it probably won’t look pretty, and it doesn’t allow
+you to identify your brand.</p>
+<p>Browsers have default styling but is rather basic and isn’t the same
+between browsers. So it can’t be relied upon for a consistent
+experience.</p>
+<p>The code snippets in this section are used to demonstrate the syntax.
+There are no guarantees it will look good.</p>
+<h3 id="making-a-rule">Making a rule</h3>
+<p>Cascading Style Sheets (CSS) works by setting properties. The
+property and the value are connected by a colon. When you have multiple
+declarations, they are separated by a semicolon.</p>
+<div class="sourceCode" id="cb12" data-theme="light"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>    width<span class="in">: 100%;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    background-color<span class="in">: teal</span>;</span></code></pre></div>
+<p>I’m not going to explain individual CSS properties. There’s a lot of
+them. They are usually easy to understand, and they can be researched as
+you discover new properties.</p>
+<h3 id="inline-css">Inline CSS</h3>
+<p>At this point, you’re saying what you want something to look like,
+but how is this attached to the HTML? The quickest way to see the result
+is to inline it. Take the declarations and put them into the
+<code>style</code> attribute of an HTML element.</p>
+<div class="sourceCode" id="cb13" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/buy&quot;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ot">   style=</span><span class="st">&quot;width: 100%; background-color: teal;&quot;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>       Buy now</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>This will work, but it’s not a sustainable way to style an entire
+page, or website. Declaring everything every time it is needed will
+increase the size of the page, and there is a risk that design updates
+won’t be applied everywhere. Which can detract from the design and could
+produce inaccessible content.</p>
+<h3 id="embedded-css">Embedded CSS</h3>
+<p>There is a <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style"><code>style</code>
+element</a>. This allows you to add style rules to the page
+<code>head</code> (don’t add it to the body as that causes it to fail
+accessibility checks).</p>
+<p>It is better than inline CSS but leaving the style definitions in the
+page still leads to duplication across the website.</p>
+<h3 id="css-files-and-selectors">CSS files and selectors</h3>
+<p>To build in a scalable way, the CSS should be moved into a separate
+file, and <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>link</code></a>ed
+from the <code>head</code>.</p>
+<p>Wrap each group of declarations in braces (aka curly brackets
+<code>{}</code>) and put a selector in front of it to target particular
+elements on the page.</p>
+<div class="sourceCode" id="cb14" data-theme="light"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>selectorGoesHere {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span>: <span class="cn">teal</span><span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h4 id="benefits-of-knowing-about-selectors">Benefits of knowing about
+selectors</h4>
+<p>Firstly, this allows you to write and understand CSS. Secondly, this
+syntax can be used when searching for elements in the browser dev tools,
+or when using the Screaming Frog Web crawler. Without this notation,
+using a basic text search, there may be a lot of matches that aren’t
+relevant to go through.</p>
+<h4 id="available-selectors">Available selectors</h4>
+<p>When choosing selectors, the basic options are:</p>
+<ul>
+<li>classes</li>
+<li>tag names</li>
+<li>IDs</li>
+</ul>
+<h5 id="class">class</h5>
+<p><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">Class
+selectors</a> are a good option in most cases. The class name should be
+descriptive, and it is opt-in: it will only happen when you add the
+class to an element. Classes are identified by putting a full stop in
+front of the class name.</p>
+<p>It is normal to combine multiple classes. A base class that does most
+of the setup, followed by supporting classes that apply variants.</p>
+<div class="sourceCode" id="cb15" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.cta</span> {</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.cta-primary</span> {</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span>: <span class="cn">teal</span><span class="op">;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/buy&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;cta cta-primary&quot;</span><span class="dt">&gt;</span>Buy now<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<h5 id="tags">Tags</h5>
+<p><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors">Tag
+names</a> are a tempting choice for selectors, but there is the risk of
+finding situations where you don’t want the styling. Then it needs to be
+unpicked and reversed with additional CSS.</p>
+<p>Even if the core site doesn’t have issues, it may affect third-party
+services the site uses.</p>
+<p>It’s not that tag rules should never be used, but be careful to limit
+it to properties that are needed every time the tag is used.</p>
+<div class="sourceCode" id="cb16" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    a {</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span>: <span class="cn">teal</span><span class="op">;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        <span class="co">/*  This makes the link stand out</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">            but do you want that for the </span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">            legal pages in the footer?</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">        */</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/buy&quot;</span><span class="dt">&gt;</span>Buy now<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<h5 id="ids">IDs</h5>
+<p><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">IDs</a>
+should normally be avoided. They’re based on the assumption that this
+CSS will only ever be required in this single place. Using a class
+pre-empts the need to use it more. If you do need it, the selector
+starts with a hash.</p>
+<div class="sourceCode" id="cb17" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#top</span> {</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span>: <span class="cn">teal</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;top&quot;</span><span class="dt">&gt;</span>Top of the page<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="combining-selectors">Combining selectors</h4>
+<p>You are not limited to using a single selector. You can target
+particular situations with a combination. The computer looks for
+elements matching the first part of the selector, and then checks for
+the next part in any descendant elements. You separate each part of the
+selector by a space.</p>
+<p>If there are no spaces, you’re looking for an element with all these
+selectors.</p>
+<p>If you want to refer to an element that is the direct child of
+another, connect these selectors with a <code>&gt;</code>.</p>
+<p>If there are multiple selectors that should be styled the same, you
+can separate them with a comma.</p>
+<div class="sourceCode" id="cb18" data-theme="light"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>header p {</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* This is applied. In 2 places */</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-family</span>: <span class="dv">cursive</span><span class="op">;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>header <span class="op">&gt;</span> strong {</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* This won&#39;t be applied */</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>p <span class="op">&gt;</span> strong {</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* This will be applied */</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>p<span class="fu">.subtitle</span> {</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">/*  No space so we&#39;re looking for paragraph tags</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="co">        with the subtitle class */</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span>: <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-variant</span>: <span class="dv">small-caps</span><span class="op">;</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>h1<span class="op">,</span> h2 {</span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Page title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;subtitle&quot;</span><span class="dt">&gt;</span>Strapline with a <span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span>keyword<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">nav</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Add a link here<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Introducing the first part of the content<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="advanced-selectors">Advanced selectors</h4>
+<p>With the above selectors, you can style elements on the page, but
+here are a couple of options to pick elements more contextually. Without
+these, you would have to use JavaScript to add and remove classes.
+Achieving the same results with more effort.</p>
+<h5 id="selecting-elements-by-attributes">Selecting elements by
+attributes</h5>
+<p>You can select elements by their <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">attributes</a>.
+Either just finding elements with that attribute, or by testing its
+value.</p>
+<div class="sourceCode" id="cb19" data-theme="light"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a<span class="ex">[href]</span> {</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* All anchor tags with an href. */</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>a<span class="ex">[href</span><span class="op">=</span><span class="st">&quot;https://developer.mozilla.org/&quot;</span><span class="ex">]</span> {</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Styles any link to the MDN homepage */</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>a<span class="ex">[href</span><span class="op">^=</span><span class="st">&quot;https://developer.mozilla.org/&quot;</span><span class="ex">]</span> {</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Styles any links starting to a page on MDN */</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>a<span class="ex">[href</span><span class="op">$=</span><span class="st">&quot;php&quot;</span><span class="ex">]</span> {</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">/*  Any links ending in php.</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co">        This won&#39;t match php files with a query string</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co">    */</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>a<span class="ex">[href</span><span class="op">*=</span><span class="st">&quot;developer&quot;</span><span class="ex">]</span> {</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Links including the word developer */</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h5 id="pseudo-elements-and-pseudo-classes">Pseudo-elements and
+pseudo-classes</h5>
+<p>There are <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>
+to select part of an element, these are identified by two leading
+colons.</p>
+<p><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a>
+selects states that an element can be in, they begin with a single
+colon.</p>
+<dl>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code>::before</code></a>,
+<a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after"><code>::after</code></a></dt>
+<dd>
+<p>These allow you to add text or symbols when paired with the <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">content
+property</a>. This isn’t part of the HTML, so it shouldn’t be the only
+source of important information. Visual cues for additional context:
+yes; crucial insights: no.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/::marker"><code>::marker</code></a></dt>
+<dd>
+<p>The symbol or number used in a list.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/::selection"><code>::selection</code></a></dt>
+<dd>
+<p>This formats the text a user has selected.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover"><code>:hover</code></a></dt>
+<dd>
+<p>For elements the user is mousing over.</p>
+</dd>
+<dt><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus"><code>:focus</code></a></dt>
+<dd>
+<p>These are used to style elements that are currently being interacted
+with.</p>
+</dd>
+</dl>
+<h3 id="concepts">Concepts</h3>
+<p>This section covers the approach CSS uses to determine which rule is
+used when there are conflicts.</p>
+<p>While this process exists, it is better to keep your CSS as simple as
+possible. Being “clever” in coding only works if it makes sense to the
+next person to work on it.</p>
+<h4 id="inheritance">Inheritance</h4>
+<p>When a property is defined, this is (usually) also applied to its
+child elements until it is overruled by something more specific.</p>
+<p>To set a default font, create a definition and apply it to the
+<code>body</code> element. Then create a new rule for the things that
+need a different font.</p>
+<p>This is useful as it allows the overall appearance of the site to be
+determined and then the exceptions can be addressed locally.</p>
+<h4 id="order-of-appearance-the-cascade">Order of appearance (The
+cascade)</h4>
+<p>When there are multiple rules affecting the same property, all else
+being equal, the latest definition wins. This works across selectors and
+files. So there is a risk that wide-ranging rules in third-party code
+could conflict with the rules developed for the site.</p>
+<h4 id="specificity">Specificity</h4>
+<p>This is used to prioritise certain selectors. The lowest priority is
+an element selector, then classes and attributes, and then IDs. Inline
+styles have the highest priority. The scores for each level are
+calculated separately so a lower level can be useful for a
+tie-break.</p>
+<h4 id="important">Important</h4>
+<p>There is a way of overriding the normal priority of a rule. Using the
+important key word. <code>!important</code> is added after the value and
+before the semicolon.</p>
+<p>This is a bad sign as the developers weren’t able to fit their rules
+into the existing styling and needed a queue-jump. If there are multiple
+important rules, they will be ordered using the approaches described
+above.</p>
+<h2 id="javascript">JavaScript</h2>
+<p>By using HTML and CSS, you can produce a website that displays
+content and looks good. However, it won’t be able to respond to much.
+JavaScript makes the site interactive.</p>
+<p>JavaScript allows a page to fetch, evaluate and display new data. It
+can react to events that occur on the page. Like button presses and
+users submitting information.</p>
+<p>Without JavaScript, all processing would have to happen on the
+server. With data being passed through URLs or web forms. Doing this
+slows down the experience for users. However, any important calculations
+<strong>must</strong> be performed/verified on the server as users could
+edit the code on their machine, or generate fake responses.</p>
+</main>
+</body>
+</html>
