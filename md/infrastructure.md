@@ -1,19 +1,15 @@
 ---
-abstract: More of an intro
-abstract-title: null
 aliases:
   - null
-date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:33:02
-date modified: Sunday, 2023-07-23, 20:46:01
+date modified: Tuesday, 2023-07-25, 02:12:24
 lang: en-GB
-subtitle: Where the browser gets something to show you
+subtitle: Where the browser gets something to show you from
 tags:
   - null
 title: Infrastructure | Cyber Pontification
 ---
 
-# infrastructure
 
 With what we've covered so far, you've got web pages that look good and can respond to external data, enhanced by external services. But how do we share this with the world and write our own APIs?
 

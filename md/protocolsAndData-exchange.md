@@ -1,19 +1,15 @@
 ---
-abstract: More of an intro
-abstract-title: null
 aliases:
   - null
-date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:29:55
-date modified: Monday, 2023-07-24, 00:51:47
+date modified: Tuesday, 2023-07-25, 02:12:26
 lang: en-GB
-subtitle: How the browser gets data
+subtitle: How the browser talks to other computers
 tags:
   - null
 title: Protocols and data-exchange | Cyber Pontification
 ---
 
-# protocolsAndData-exchange
 
 ## HTTP
 

@@ -1,11 +1,8 @@
 ---
-abstract: More of an intro
-abstract-title: null
 aliases:
   - null
-date: 22/7/2023
 date created: Monday, 2023-07-10, 22:54:55
-date modified: Sunday, 2023-07-23, 20:38:55
+date modified: Tuesday, 2023-07-25, 02:12:21
 lang: en-GB
 subtitle: Types of testing to consider
 tags:
@@ -13,7 +10,6 @@ tags:
 title: Software Testing | Cyber Pontification
 ---
 
-# softwareTesting
 
 Testing is a process for checking that your software works as expected. There are multiple stages and types that can (and should) be used.
 

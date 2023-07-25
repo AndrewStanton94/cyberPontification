@@ -2,14 +2,13 @@
 aliases:
   - 
 date created: Sunday, 2023-06-25, 20:23:07
-date modified: Monday, 2023-07-24, 00:54:57
+date modified: Tuesday, 2023-07-25, 02:12:13
 lang: en-GB
 tags:
   - 
 title: Cyber Pontification
 ---
 
-# Cyber pontification
 
 I wanted to write this as an introduction to the technology we use in the web team.
 

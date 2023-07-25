@@ -1,19 +1,15 @@
 ---
-abstract: More of an intro
-abstract-title: null
 aliases:
   - null
-date: 22/7/2023
 date created: Monday, 2023-07-10, 01:26:35
-date modified: Sunday, 2023-07-23, 20:57:21
+date modified: Tuesday, 2023-07-25, 02:12:23
 lang: en-GB
-subtitle: A couple more things I wanted to mention that didn't fit into the
+subtitle: A couple more things I wanted to mention
 tags:
   - null
 title: Assorted others | Cyber Pontification
 ---
 
-# assortedOthers
 
 ## Markdown
 

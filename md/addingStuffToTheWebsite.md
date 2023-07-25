@@ -1,11 +1,8 @@
 ---
-abstract: More of an intro
-abstract-title: null
 aliases:
   - null
-date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:29:15
-date modified: Monday, 2023-07-24, 00:50:17
+date modified: Tuesday, 2023-07-25, 02:12:28
 lang: en-GB
 subtitle: Adding external features to the site
 tags:
@@ -13,7 +10,6 @@ tags:
 title: Adding stuff to the website | Cyber Pontification
 ---
 
-# addingStuffToTheWebsite
 
 Having read the [[front-endLanguages]] section, you have an understanding of the HTML we write and the styling and interactivity added by our agency.
 

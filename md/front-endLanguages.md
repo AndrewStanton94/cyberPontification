@@ -1,12 +1,8 @@
 ---
-abstract: More of an intro
-abstract-title: null
 aliases:
   - null
-build command: pandoc Client\ \(front-end\)\ languages.md -s -o client2.html
-date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:25:33
-date modified: Monday, 2023-07-24, 00:48:42
+date modified: Tuesday, 2023-07-25, 02:12:11
 lang: en-GB
 subtitle: The languages that put things on your screen
 tags:
@@ -14,7 +10,6 @@ tags:
 title: Front-end languages | Cyber Pontification
 ---
 
-# front-endLanguages
 
 The client is the device the site visitor uses to access websites. We need three front-end languages to make interactive webpages: HTML, CSS and JavaScript.
 

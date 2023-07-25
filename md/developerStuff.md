@@ -1,11 +1,8 @@
 ---
-abstract: More of an intro
-abstract-title: null
 aliases:
   - null
-date: 22/7/2023
 date created: Saturday, 2023-07-01, 18:33:36
-date modified: Sunday, 2023-07-23, 20:56:45
+date modified: Tuesday, 2023-07-25, 02:12:19
 lang: en-GB
 subtitle: A few developer terms that might be of interest
 tags:
@@ -13,7 +10,6 @@ tags:
 title: Developer stuff | Cyber Pontification
 ---
 
-# developerStuff
 
 Here are some terms that you shouldn't need to worry about but they might be interesting if you encounter them.
 
