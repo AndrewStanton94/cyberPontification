@@ -1,0 +1,9 @@
+nav[role="doc-toc"] {
+  /* This element scrolls normally until it gets to a specified point. Then it stays */
+  position: sticky;
+  top: 0; /* The specified point is the top of the page */
+
+  background-color: var(--background-color);
+
+  z-index: 1; /* Moves the element above other ones. This was due to the code snippets appearing on top */
+}

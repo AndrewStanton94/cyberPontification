@@ -11,6 +11,7 @@ for file in md/*; do
     --table-of-contents \
     --toc-depth 2 \
     --css 'https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css' \
+    --css '/assets/styles.css' \
     --include-before-body 'partials/beforeBody-main.html' \
     --include-after-body 'partials/afterBody-main.html' \
     "${file}"
