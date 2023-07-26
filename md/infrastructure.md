@@ -2,7 +2,7 @@
 aliases:
   - null
 date created: Saturday, 2023-07-01, 18:33:02
-date modified: Tuesday, 2023-07-25, 02:12:24
+date modified: Wednesday, 2023-07-26, 01:11:09
 lang: en-GB
 subtitle: Where the browser gets something to show you from
 tags:
@@ -87,7 +87,7 @@ There's a lot more IPv6 addresses. $10^{28}$ of them. They are made from 8 group
 
 Hexadecimal is used because it represents 16 values in one character (using 0-9 and then A-F). This is the equivalent of 4 binary digits, which the computer uses. Hexadecimal is easier for humans to work with than binary, and it's easier for the computer to convert hexadecimal back to binary than decimal to binary.
 
-## Web Addresses (URLs)
+## URLs
 
 Uniform Resource Locators (URLs) are how we identify a piece of content online. These are the components:
 

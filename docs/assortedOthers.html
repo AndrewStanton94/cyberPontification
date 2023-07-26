@@ -22,11 +22,28 @@
     }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
+<nav class="container">
+  <ul>
+    <li><a href="/front-endLanguages.html">Front-end Languages</a></li>
+    <li><a href="/addingStuffToTheWebsite.html">
+      Adding stuff to the website
+    </a></li>
+    <li><a href="/protocolsAndData-exchange.html">
+      Protocols and Data-exchange
+    </a></li>
+    <li><a href="/infrastructure.html">Infrastructure</a></li>
+    <li><a href="/assortedOthers.html">Assorted Others</a></li>
+    <li><a href="/softwareTesting.html">Software Testing</a></li>
+    <li><a href="/developerStuff.html">Developer Stuff</a></li>
+  </ul>
+</nav>
+
 <main class="container">
 <header id="title-block-header">
 <h1 class="title">Assorted others | Cyber Pontification</h1>
@@ -59,17 +76,96 @@ Syntax</a></li>
 </ul>
 <h2 id="regex">RegEx</h2>
 <p>Regular Expression (RegEx) is a syntax that allows people to search
-for a pattern. Rather than just looking for a particular term, you can
-specify what characters you want and how many times they should
-appear.</p>
-<p>You can use a vertical bar <code>|</code> if there are multiple
-choices. E.g. <code>cat|dog</code></p>
-<p>It’s also possible to use character sets. Either predefined ones
-(covering letters, numbers, or spaces), or your own groups of
-characters. This can be paired with quantifiers.</p>
+for a pattern. Rather than looking for a particular term, you can
+specify what characters you want and how many times they should appear.
+Describing the shape the data should have.</p>
+<p>The simplest search would be a series of letters, numbers, and
+spaces. These characters don’t have any special meaning, so they would
+work like a basic search. Just be aware that it is case-sensitive by
+default. So <code>result</code> is not the same as
+<code>RESULT</code>.</p>
+<h3 id="multiple-choices">Multiple choices?</h3>
+<p>If you’re looking for multiple things, you can tell the regex to look
+for <code>this</code> or <code>that</code>. Just use a vertical bar
+<code>|</code> to connect the choices. E.g. <code>cat|dog</code>. This
+works well by itself if there are a finite number of options.</p>
+<h3 id="where-are-you-looking">Where are you looking?</h3>
+<p>By default, the regex will take the text you give it and look
+everywhere for the pattern. This is a sensible default, but you might
+want to narrow it down. You can refer to the start or end of the
+input.</p>
+<p>Use the caret (<code>^</code>) for the start and (<code>$</code>) for
+the end. Taking the URL structure from <a
+href="/infrastructure.html">Infrastructure</a>. We can look for secure
+URLs by checking the protocol with <code>^https</code> and look for PDFs
+with <code>pdf$</code>. However, that won’t include URLs with a query
+string.</p>
+<h3 id="choosing-characters">Choosing characters</h3>
+<p>If you want to capture any character, you can use a full stop
+<code>.</code>. This will match a single instance of any character.</p>
+<h4 id="make-your-own-group">Make your own group</h4>
+<p>You can specify particular characters by listing them inside square
+brackets. This will cover all the vowels: <code>[aeiou]</code>.</p>
+<p>You can include any character. Just don’t put a caret
+(<code>^</code>) as the first character, as this changes the group to
+mean anything except these characters. <code>[^aeiou]</code> matches
+anything but vowels.</p>
+<p>You can also use ranges. So you can get all letters with
+<code>[A-Za-z]</code>. This works as computers represent all characters
+with numbers, so groups like letters and numbers are stored
+sequentially. While you could look for less intuitive sequences to use
+as a range, it wouldn’t be recommended.</p>
+<h4 id="premade-groups">Premade groups</h4>
+<p>These are some shorter representations of common groups so they don’t
+need to be redefined each time. Like the caret, you can get the opposite
+group. Use the capital version of these letters.</p>
+<dl>
+<dt>Digits <code>\d</code></dt>
+<dd>
+<p>This covers the numbers [0-9]</p>
+</dd>
+<dt>Spaces <code>\s</code></dt>
+<dd>
+<p>Representing spaces, tabs and new lines.</p>
+</dd>
+<dt>Words <code>\w</code></dt>
+<dd>
+<p>A bit misleading, these covers letters, numbers, and underscores. Not
+just letters.</p>
+</dd>
+</dl>
+<h3 id="how-many">How many?</h3>
+<p>The previous section shows you how to refer to particular characters,
+but it only looks for a single instance. How do we get more?</p>
 <p>Quantifiers can be explicit numbers, or vaguer categories. By
 default, regexes are greedy. They will look for the largest possible
 match and reduce until all segments of the regex are used.</p>
+<p>There are a few characters that capture some rough quantities.</p>
+<dl>
+<dt>Asterisk <code>*</code></dt>
+<dd>
+<p>This covers zero or more options. So any number of matches.</p>
+</dd>
+<dt>Plus <code>+</code></dt>
+<dd>
+<p>This matches one or more occurrences. The thing I’m looking for must
+exist.</p>
+</dd>
+<dt>Question mark <code>?</code></dt>
+<dd>
+<p>This represents zero or one matches. This item is optional.</p>
+</dd>
+</dl>
+<p>If you want more precise quantities, you can use curly brackets. A
+single value can be given <code>{5}</code>, or it can take a minimum and
+a maximum <code>{4,6}</code>.</p>
+<h3 id="capture-groups">Capture groups</h3>
+<p>Sometimes you just use a regex to find a match. Other times, you need
+to do something with parts of the match. Wrap the parts of interest in
+brackets <code>()</code> and then you can reference them in a
+substitution using a dollar and the ordinal number of the capture group.
+E.g. <code>$2</code> for the second group.</p>
+<h3 id="examples">Examples</h3>
 <p>One of the simplest regex’s is <code>.*</code>. Which means any
 character any number of times. This is useful if you need to capture
 everything between other specific items.</p>

@@ -2,7 +2,7 @@
 aliases:
   - null
 date created: Saturday, 2023-07-01, 18:29:15
-date modified: Tuesday, 2023-07-25, 02:12:28
+date modified: Tuesday, 2023-07-25, 23:04:03
 lang: en-GB
 subtitle: Adding external features to the site
 tags:
@@ -11,7 +11,7 @@ title: Adding stuff to the website | Cyber Pontification
 ---
 
 
-Having read the [[front-endLanguages]] section, you have an understanding of the HTML we write and the styling and interactivity added by our agency.
+Having read the [Front-end Languages](/front-endLanguages.html) section, you have an understanding of the HTML we write and the styling and interactivity added by our agency.
 
 Now, I'm going to mention a couple of ways we add additional functionality and information. Plus a way to manage the risk this introduces.
 
